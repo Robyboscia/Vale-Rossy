@@ -54,3 +54,19 @@ body{background:var(--cream)}
 @media(max-width:760px){.hero-copy{padding:70px 0 12px}.hero h1{font-size:clamp(44px,9.1vw,68px)}.hero-visual{height:485px;min-height:485px}.hero-frame-main{top:22px;height:415px;width:66%;right:7%}.hero-frame-inset{bottom:18px;height:228px;width:43%;left:5%}.hero-legend{font-size:7px;bottom:12px}.hero-stamp{bottom:49px}.hero-curve{top:30px}.winter-quote{font-size:16px;padding:23px 15px;gap:12px}.product-card:hover{transform:none}}
 @media(max-width:420px){.hero h1{font-size:44px;max-width:360px}.hero h1 em{white-space:normal}.hero-visual{height:430px;min-height:430px}.hero-frame-main{height:360px;width:69%;top:13px;right:3%}.hero-frame-inset{height:205px;width:42%;bottom:20px;left:0}.hero-stamp{width:69px;height:69px;bottom:57px}.hero-legend{letter-spacing:.06em;right:5%;bottom:8px}.winter-quote{font-size:14px}.winter-quote>span:first-child,.winter-quote>span:last-child{font-size:16px}.card-content h3{font-size:20px}.card-content p{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.festive-lights i{animation:none}}
+
+/* Vale & Rossy — palette Natale: verde bosco, rosso caldo, avorio. */
+:root{--green:#174b37;--green-deep:#103b2b;--green-light:#e4efe5;--cream:#fcfdf9;--paper:#f0f6ed;--ink:#203c2d;--burgundy:#a52e3c;--gold:#c6a46b;--muted:#5e7264;--line:#dbe8dc;--shadow:0 22px 65px rgba(16,59,43,.12)}
+body,.site-header,.intro-strip,.how{background:var(--cream)}
+.hero{background:linear-gradient(125deg,#103b2b 0%,#19533b 60%,#246244 100%)}
+.manifesto{background:#e8f1e6}
+.step{background:#f0f6ef;border-color:#dce9dc}
+.card-image,.dialog-gallery{background:#e6eee4}
+.button-light,.contact-links a{background:#fff9ec;color:#174b37}
+.announcement,.hero-stamp,.manifesto-seal{background:#a52e3c}
+.filter.active,.filter:hover,.nav-contact,.button-dark{background:#174b37}
+.card-content .type,.eyebrow-dark,.section-heading h2 em,.how h2 em,.manifesto-text h2 em{color:#a52e3c}
+.hero-frame-main,.hero-frame-inset{border-color:#f7f7ec}
+.contact{background:linear-gradient(125deg,#123d2d,#1c523a)}
+.footer{background:#102f24}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
