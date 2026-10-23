@@ -103,15 +103,17 @@
       bar.target='_blank';
       bar.rel='noopener noreferrer';
       bar.classList.add('is-active');
-      subtitle.textContent='Scrivici per informazioni sulle creazioni';
+      subtitle.textContent='+39 328 922 8980 · informazioni sulle creazioni';
       action.textContent='Scrivici ↗';
     } else {
       bar.removeAttribute('href');
       bar.removeAttribute('target');
       bar.removeAttribute('rel');
       bar.classList.remove('is-active');
-      subtitle.textContent='123455678 · numero dimostrativo, non attivo';
-      action.textContent='Demo';
+      subtitle.textContent='Numero WhatsApp non configurato';
+      action.textContent='Non disponibile';
+      bar.hidden=true;
+      return;
     }
     bar.hidden=false;
   }
