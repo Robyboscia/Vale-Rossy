@@ -1,0 +1,44 @@
+VALE & ROSSY — SITO-VETRINA NATALIZIO — VERSIONE 2.0: LA BOTTEGA DI NATALE
+===================================
+
+ANTEPRIMA SUL COMPUTER
+1. Estrai tutti i file dallo ZIP.
+2. Apri index.html con Chrome, Edge, Safari o Firefox.
+3. Usa i filtri e clicca sulle foto per vedere le gallerie.
+
+PRIMA DELLA PUBBLICAZIONE
+1. Apri config.js con un editor di testo.
+2. Inserisci il numero WhatsApp completo di prefisso internazionale (solo cifre),
+   e/o il link Instagram o l'indirizzo e-mail.
+3. Salva il file. Senza questi dati il sito mostra "I recapiti saranno
+   inseriti prima della pubblicazione" e permette solo di copiare messaggi.
+4. Verifica con gli artigiani i nomi dei prodotti e le loro descrizioni in products.js.
+   I prezzi NON sono presenti.
+5. Controlla gli eventuali obblighi fiscali, di vendita e informativi prima
+   di usarlo per promuovere vendite abituali.
+
+PUBBLICAZIONE GRATUITA CON CLOUDFLARE PAGES
+1. Apri https://dash.cloudflare.com/ e crea/accedi a un account.
+2. Vai su Workers & Pages > Create application > Get started > Drag and drop.
+3. Carica lo ZIP del sito oppure la cartella estratta.
+4. Assegna il nome al progetto e premi Deploy.
+5. Otterrai un indirizzo gratuito del tipo nomeprogetto.pages.dev.
+6. Per aggiungere nuove creazioni, aggiorna products.js e assets/img, ricrea
+   lo ZIP e carica una nuova versione in Pages.
+
+DOMINIO PERSONALE
+Un dominio .it è facoltativo ed è normalmente a pagamento; si può
+collegare successivamente al sito ospitato su Pages.
+
+NOTE
+- Il sito è statico: non salva dati, non installa sistemi di pagamento,
+  non raccoglie ordini e non usa analitiche o cookie di profilazione.
+- Le nove foto migliorate sono raccolte in 4 schede con gallerie multiple.
+- Tutti i file sono locali: nessuna libreria JavaScript esterna obbligatoria.
+- La modifica dei contenuti richiede aggiornare e ricaricare il sito.
+
+ISPIRAZIONE GRAFICA
+Atmosfera film Hallmark / bottega artigianale natalizia; palette verde bosco,
+bordeaux, carta avorio e oro caldo. Riferimenti: Terrain, Rifle Paper Co.,
+Anthropologie (solo ispirazione stilistica, nessun materiale di terzi riutilizzato).
+

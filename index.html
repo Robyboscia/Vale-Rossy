@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#213c31">
+  <meta name="description" content="Vale & Rossy: piccole creazioni natalizie fatte a mano. Scopri le decorazioni e gli addobbi della collezione per le feste.">
+  <title>Vale & Rossy — Ti conciamo per le feste</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/img/03_pallina_albero_natalizio_primo_piano.webp" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="products.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span aria-hidden="true">✧</span> Benvenuti nella piccola bottega del Natale <span aria-hidden="true">✧</span></div>
+  <header class="site-header" id="inizio">
+    <div class="header-inner shell">
+      <a class="brand" href="#inizio" aria-label="Vale e Rossy, torna all'inizio">
+        <span class="brand-mark" aria-hidden="true">V<span class="amp">&</span>R</span>
+        <span class="brand-wordmark"><strong>Vale <i>&</i> Rossy</strong><small>TI CONCIAMO PER LE FESTE</small></span>
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Navigazione principale">
+        <a href="#collezione">Le creazioni</a>
+        <a href="#filosofia">Il nostro mondo</a>
+        <a href="#come-funziona">Come funziona</a>
+        <a class="nav-contact" href="#contatti">Contatti <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Apri il menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="festive-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-wrap shell">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-icon">✺</span> LA PICCOLA BOTTEGA DEL NATALE</span>
+          <h1 id="hero-title">C’è un po’ di <em>Natale</em><br>in ogni piccola cosa.</h1>
+          <p>Tra pennelli, nastri e un pizzico di fantasia prendono vita piccole creazioni fatte a mano. Decorazioni nate per custodire la parte più bella delle feste: i ricordi.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#collezione">Entra nella bottega <span aria-hidden="true">↗</span></a>
+            <a class="text-link text-link-light" href="#filosofia">Scopri il nostro mondo <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note"><span class="sparkle" aria-hidden="true">✶</span><span><b>Fatte a mano, una alla volta.</b><br>Ogni piccola imperfezione racconta qualcosa.</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Decorazioni natalizie fatte a mano di Vale e Rossy">
+          <div class="hero-frame hero-frame-main"><img src="assets/img/03_pallina_albero_natalizio_primo_piano.webp" alt="Pallina turchese con albero di Natale dipinto a mano" width="1152" height="1536" fetchpriority="high"></div>
+          <div class="hero-frame hero-frame-inset"><img src="assets/img/06_alberello_verde_primo_piano.webp" alt="Alberello verde con dettagli rossi e bianchi" width="1152" height="1536"></div>
+          <div class="hero-stamp" aria-hidden="true"><span>PICCOLA</span><b>✳</b><span>BOTTEGA</span></div>
+          <div class="hero-curve" aria-hidden="true">✧</div><div class="hero-legend" aria-hidden="true">UNA STORIA FATTA DI DETTAGLI <span>— ✳ —</span> NATALE 2026</div>
+        </div>
+      </div>
+      <div class="hero-bottom-wave" aria-hidden="true"></div>
+    </section>
+
+    <div class="winter-quote" aria-label="Lo spirito delle creazioni"><span aria-hidden="true">✦</span> <span>Le cose più belle non escono da una fabbrica.<br>Nascono da un'idea, e da due mani che ci credono.</span> <span aria-hidden="true">✦</span></div>
+    <section class="intro-strip" aria-label="Caratteristiche della collezione">
+      <div class="shell intro-inner">
+        <div><span aria-hidden="true">✦</span> Fatto a mano</div>
+        <i aria-hidden="true"></i>
+        <div><span aria-hidden="true">✦</span> Piccoli dettagli, grandi sorrisi</div>
+        <i aria-hidden="true"></i>
+        <div><span aria-hidden="true">✦</span> Idee per le feste</div>
+      </div>
+    </section>
+
+    <section class="collection section-space" id="collezione" aria-labelledby="collection-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow eyebrow-dark">LA COLLEZIONE</span>
+            <h2 id="collection-title">Piccole meraviglie <em>da scoprire.</em></h2>
+            <p>Sfoglia le nostre decorazioni: ognuna ha un dettaglio diverso, un colore speciale, una piccola storia. Altre creazioni stanno arrivando!</p>
+          </div>
+          <div class="product-count"><span id="product-count">04</span><small>creazioni<br>da scoprire</small></div>
+        </div>
+        <div class="filters" role="group" aria-label="Filtra le creazioni">
+          <button class="filter active" type="button" data-filter="tutti" aria-pressed="true">Tutte le creazioni</button>
+          <button class="filter" type="button" data-filter="palline" aria-pressed="false">Palline natalizie</button>
+          <button class="filter" type="button" data-filter="addobbi" aria-pressed="false">Addobbi speciali</button>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="collection-tail"><span aria-hidden="true">✶</span><span>Questo è solo l’inizio. Nuove creazioni arriveranno presto.</span><span aria-hidden="true">✶</span></div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="filosofia" aria-labelledby="manifesto-title">
+      <div class="shell manifesto-grid">
+        <div class="manifesto-photos">
+          <div class="manifesto-photo primary"><img loading="lazy" src="assets/img/01_mano_verde_pallina_ambientata.webp" alt="Decorazione natalizia artigianale allestita su una base con neve finta e legno" width="1152" height="1536"></div>
+          <div class="manifesto-photo secondary"><img loading="lazy" src="assets/img/02_addobbo_grinch_primo_piano.webp" alt="Dettaglio di una pallina natalizia dipinta a mano" width="1152" height="1536"></div>
+          <div class="manifesto-seal">un pizzico di<br><strong>fantasia</strong> ✳</div>
+        </div>
+        <div class="manifesto-text">
+          <span class="eyebrow eyebrow-dark">IL NOSTRO MONDO</span>
+          <h2 id="manifesto-title">Il bello delle cose<br><em>fatte con calma.</em></h2>
+          <p>Si comincia da un’idea, poi arrivano i colori, le mani all’opera e quel momento in cui un piccolo addobbo trova la sua personalità. È così che immaginiamo il Natale: semplice, caldo, pieno di dettagli.</p>
+          <p>Ogni pennellata è leggermente diversa dall’altra. Ed è proprio questo che rende speciale un oggetto artigianale.</p>
+          <a class="text-link" href="#collezione">Torna alle creazioni <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="how section-space" id="come-funziona" aria-labelledby="how-title">
+      <div class="shell">
+        <div class="how-head"><span class="eyebrow eyebrow-dark">TUTTO SEMPLICE</span><h2 id="how-title">Come <em>funziona?</em></h2><p>Questo è un piccolo catalogo di creazioni artigianali, non un negozio con carrello.</p></div>
+        <div class="steps">
+          <div class="step"><span class="step-num">01</span><span class="step-icon" aria-hidden="true">✦</span><h3>Scegli la tua preferita</h3><p>Sfoglia la galleria e guarda i dettagli di ogni creazione.</p></div>
+          <div class="step"><span class="step-num">02</span><span class="step-icon" aria-hidden="true">❋</span><h3>Chiedi informazioni</h3><p>Se qualcosa ti piace, puoi richiedere dettagli e disponibilità.</p></div>
+          <div class="step"><span class="step-num">03</span><span class="step-icon" aria-hidden="true">♡</span><h3>Organizziamoci insieme</h3><p>Eventuali richieste vengono concordate direttamente, senza acquisti automatici.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contatti" aria-labelledby="contact-title">
+      <div class="shell contact-inner">
+        <div class="contact-decoration" aria-hidden="true">✳</div>
+        <div class="contact-copy"><span class="eyebrow">HAI VISTO QUALCOSA CHE TI PIACE?</span><h2 id="contact-title">Passa a trovarci,<br><em>anche solo con un messaggio.</em></h2><p>Hai visto una decorazione che ti ha fatto sorridere? Contatta Vale & Rossy per informazioni sulle creazioni e sulla disponibilità.</p><div id="contact-links" class="contact-links"></div><p class="contact-placeholder" id="contact-placeholder">I recapiti saranno inseriti prima della pubblicazione.</p></div>
+        <div class="contact-art" aria-hidden="true"><div class="contact-big-star">✦</div><span>Vale<br><i>&</i> Rossy</span><small>TI CONCIAMO PER LE FESTE</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell footer-inner"><a href="#inizio" class="footer-brand">Vale <i>&</i> Rossy</a><span>Piccole creazioni fatte a mano ✳</span><a href="#inizio">Torna su ↑</a></div><div class="shell footer-small">Sito vetrina. Fotografie delle creazioni originali. Nessun acquisto o pagamento online.</div></footer>
+
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="dialog-title"><div class="dialog-layout"><div class="dialog-gallery"><img id="dialog-main-image" alt="" width="1152" height="1536"><div class="dialog-thumbs" id="dialog-thumbs"></div></div><div class="dialog-info"><button id="close-dialog" class="dialog-close" type="button" aria-label="Chiudi scheda">×</button><span class="eyebrow eyebrow-dark">DETTAGLI DELLA CREAZIONE</span><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-facts"><span>✦ &nbsp; Creato a mano</span><span>✦ &nbsp; Disponibilità su richiesta</span></div><div class="dialog-actions" id="dialog-actions"><button id="copy-message" class="button button-dark" type="button">Copia richiesta informazioni <span aria-hidden="true">↗</span></button><a id="modal-whatsapp" class="button button-dark" target="_blank" rel="noopener noreferrer" hidden>Scrivi su WhatsApp ↗</a></div><p class="dialog-fineprint">Le immagini mostrano le creazioni artigianali. Piccole differenze tra i pezzi sono possibili.</p><p class="copy-feedback" id="copy-feedback" role="status"></p></div></div></dialog>
+</body>
+</html>
