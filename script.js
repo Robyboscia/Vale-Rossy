@@ -92,9 +92,32 @@
     for(const item of entries){const a=document.createElement('a');a.href=item.href;a.textContent=item.text;if(item.secondary)a.classList.add('secondary');if(item.external){a.target='_blank';a.rel='noopener noreferrer';}container.appendChild(a)}
     byId('contact-placeholder').hidden=entries.length>0;
   }
+  function configureStickyWhatsApp() {
+    const bar=byId('whatsapp-sticky');
+    if(!bar)return;
+    const url=whatsappUrl('Ciao Vale & Rossy! Vorrei informazioni sulle vostre creazioni natalizie.');
+    const subtitle=byId('whatsapp-sticky-subtitle');
+    const action=byId('whatsapp-sticky-action');
+    if(url) {
+      bar.href=url;
+      bar.target='_blank';
+      bar.rel='noopener noreferrer';
+      bar.classList.add('is-active');
+      subtitle.textContent='Scrivici per informazioni sulle creazioni';
+      action.textContent='Scrivici ↗';
+    } else {
+      bar.removeAttribute('href');
+      bar.removeAttribute('target');
+      bar.removeAttribute('rel');
+      bar.classList.remove('is-active');
+      subtitle.textContent='123455678 · numero dimostrativo, non attivo';
+      action.textContent='Demo';
+    }
+    bar.hidden=false;
+  }
   const menuButton=document.querySelector('.menu-toggle');
   const nav=byId('main-nav');
   menuButton.addEventListener('click',()=>{const isOpen=nav.classList.toggle('is-open');menuButton.setAttribute('aria-expanded',String(isOpen));menuButton.setAttribute('aria-label',isOpen?'Chiudi il menu':'Apri il menu')});
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Apri il menu')}));
-  renderProducts();configureContact();
+  renderProducts();configureContact();configureStickyWhatsApp();
 })();
