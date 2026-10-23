@@ -31,5 +31,61 @@ window.VALE_ROSSY_PRODUCTS = [
     category: "addobbi",
     summary: "Una mano verde che trattiene una pallina rossa: una decorazione giocosa, tutta da osservare nei dettagli.",
     photos: ["01_mano_verde_pallina_ambientata.webp", "08_mano_verde_pallina_vista_alto.webp"]
+  },
+  {
+    id: "alberelli-verdi",
+    name: "Alberelli verdi delle feste",
+    tag: "CREAZIONE NATALIZIA",
+    category: "addobbi",
+    summary: "Alberelli decorativi verdi con stelle bianche e piccoli ornamenti colorati.",
+    photos: ["10_alberelli_verdi_gruppo.webp"]
+  },
+  {
+    id: "scenetta-confezionata",
+    name: "Scenetta natalizia confezionata",
+    tag: "COMPOSIZIONE NATALIZIA",
+    category: "addobbi",
+    summary: "Una scenetta delle feste presentata in una confezione decorata con fiocchi di neve.",
+    photos: ["11_scenetta_natalizia_confezionata.webp"]
+  },
+  {
+    id: "cerchio-gnomo",
+    name: "Cerchio natalizio con gnomo",
+    tag: "COMPOSIZIONE NATALIZIA",
+    category: "addobbi",
+    summary: "Una composizione con gnomo, alberelli e lucine su una base innevata.",
+    photos: ["12_cerchio_natalizio_gnomo.webp"]
+  },
+  {
+    id: "alberelli-bianchi",
+    name: "Alberelli bianchi e verdi",
+    tag: "CREAZIONE NATALIZIA",
+    category: "addobbi",
+    summary: "Alberelli con dettagli bianchi, verdi e piccoli ornamenti, fotografati durante la lavorazione.",
+    photos: ["13_alberelli_bianchi_lavorazione.webp"]
+  },
+  {
+    id: "cerchio-trenino",
+    name: "Paesaggio natalizio con trenino",
+    tag: "COMPOSIZIONE NATALIZIA",
+    category: "addobbi",
+    summary: "Una scenetta con trenino, piccoli abeti e lucine su una base decorativa.",
+    photos: ["14_cerchio_natalizio_trenino.webp"]
+  },
+  {
+    id: "pallina-rosa",
+    name: "Pallina rosa personalizzata",
+    tag: "ADDOBBO PERSONALIZZATO",
+    category: "palline",
+    summary: "Una decorazione rosa con personaggio dipinto, stellina e nome personalizzato.",
+    photos: ["15_pallina_rosa_personalizzata.webp"]
+  },
+  {
+    id: "collezione-alberelli",
+    name: "Collezione di alberelli",
+    tag: "CREAZIONE NATALIZIA",
+    category: "addobbi",
+    summary: "Una selezione di alberelli decorativi in diverse combinazioni di verde, bianco e rosso.",
+    photos: ["16_collezione_alberelli.webp"]
   }
 ];
