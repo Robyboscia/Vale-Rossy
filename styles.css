@@ -82,3 +82,22 @@ body,.site-header,.intro-strip,.how{background:var(--cream)}
 .contact-placeholder{display:none!important}
 .contact-decoration{pointer-events:none!important;z-index:0!important;opacity:.15!important;font-size:clamp(150px,26vw,350px)!important;right:-25px!important;bottom:-70px!important}
 @media(max-width:760px){.brand-mark{flex-basis:40px;width:40px;height:40px}.contact-decoration{display:none!important}.contact-copy{min-width:0}.contact h2{overflow-wrap:break-word}.whatsapp-demo{width:100%;max-width:390px}}
+
+/* Floating WhatsApp contact — mobile-first, safe-area aware */
+.whatsapp-sticky[hidden]{display:none!important}
+.whatsapp-sticky{position:fixed;z-index:65;bottom:0;left:0;right:0;display:flex;align-items:center;gap:12px;padding:12px max(18px,env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));min-height:72px;background:#fffaf0;color:#143e2c;border-top:1px solid #dddbc9;box-shadow:0 -8px 30px #122d1f24;text-decoration:none;box-sizing:border-box;cursor:default}
+.whatsapp-sticky-icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:#25d366;color:white;box-shadow:0 4px 12px #123d2d24}
+.whatsapp-sticky-copy{min-width:0;flex:1;display:flex;flex-direction:column;gap:3px}
+.whatsapp-sticky-copy strong{font-size:14px;letter-spacing:.01em;line-height:1.3;font-weight:780}
+.whatsapp-sticky-copy small{font-size:11px;line-height:1.4;color:#627568;overflow-wrap:anywhere}
+.whatsapp-sticky-action{flex:0 0 auto;padding:10px 14px;border-radius:9px;background:#e5eae3;color:#577062;font-size:12px;line-height:1;font-weight:800}
+.whatsapp-sticky.is-active{cursor:pointer}
+.whatsapp-sticky.is-active .whatsapp-sticky-action{background:#176c43;color:#fff}
+.whatsapp-sticky.is-active:focus-visible{outline:3px solid #bb914e;outline-offset:-4px}
+body:has(.whatsapp-sticky:not([hidden])){padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+body:has(.product-dialog[open]) .whatsapp-sticky{visibility:hidden;pointer-events:none}
+@media(min-width:761px){
+ .whatsapp-sticky{left:auto;right:24px;bottom:24px;width:min(345px,calc(100vw - 48px));border:1px solid #dedccc;border-radius:16px;padding:12px 14px;box-shadow:0 12px 40px #08201738;min-height:70px}
+ body:has(.whatsapp-sticky:not([hidden])){padding-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){.whatsapp-sticky{transition:none}}
