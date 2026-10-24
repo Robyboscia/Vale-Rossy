@@ -88,4 +88,20 @@ window.VALE_ROSSY_PRODUCTS = [
     summary: "Una selezione di alberelli decorativi in diverse combinazioni di verde, bianco e rosso.",
     photos: ["16_collezione_alberelli.webp"]
   }
+  ,{
+    id: "pallina-gnomo-regalo",
+    name: "Pallina natalizia con gnomo",
+    tag: "PALLINA DIPINTA A MANO",
+    category: "palline",
+    summary: "Una pallina turchese con uno gnomo dal cappello rosso, stelline gialle e un piccolo regalo, ambientata in una scenetta innevata.",
+    photos: ["17_pallina_gnomo_regalo.webp"]
+  },
+  {
+    id: "pallina-babbo-ho-ho-ho",
+    name: "Pallina Babbo Natale Ho Ho Ho",
+    tag: "PALLINA DIPINTA A MANO",
+    category: "palline",
+    summary: "Una pallina turchese con Babbo Natale sorridente e la scritta Ho Ho Ho, fotografata su una base decorativa innevata.",
+    photos: ["18_pallina_babbo_ho_ho_ho.webp"]
+  }
 ];
