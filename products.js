@@ -112,4 +112,12 @@ window.VALE_ROSSY_PRODUCTS = [
     summary: "Una scenografia natalizia dipinta a mano: Babbo Natale a testa in giù nel camino, casette innevate e la slitta davanti alla luna.",
     photos: ["19_camino_babbo_natale_catalogo.webp", "20_camino_babbo_natale_dettaglio.webp"]
   }
+  ,{
+    id: "ciotolina-rosa",
+    name: "Ciotolina rosa Vale & Rossy",
+    tag: "CREAZIONE ARTIGIANALE",
+    category: "addobbi",
+    summary: "Una ciotolina artigianale rosa, fotografata con l'etichetta Vale & Rossy e confezionata con cura.",
+    photos: ["21_ciotolina_rosa_vale_rossy.webp"]
+  }
 ];
