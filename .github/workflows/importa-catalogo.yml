@@ -1,0 +1,40 @@
+name: Importa catalogo Vale & Rossy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'vale_rossy_catalogo_aggiornamento.zip'
+
+permissions:
+  contents: write
+
+jobs:
+  importa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v4
+      - name: Estrai fotografie e schede
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/vale-rossy-import
+          unzip -q vale_rossy_catalogo_aggiornamento.zip -d /tmp/vale-rossy-import
+          test -f /tmp/vale-rossy-import/products.js
+          test -d /tmp/vale-rossy-import/assets/img
+          mkdir -p assets/img
+          cp /tmp/vale-rossy-import/assets/img/*.webp assets/img/
+          cp /tmp/vale-rossy-import/products.js products.js
+          rm vale_rossy_catalogo_aggiornamento.zip
+      - name: Pubblica il catalogo aggiornato
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Pubblica nuove creazioni e fotografie Vale & Rossy"
+            git push
+          fi
