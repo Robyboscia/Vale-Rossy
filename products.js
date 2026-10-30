@@ -104,4 +104,12 @@ window.VALE_ROSSY_PRODUCTS = [
     summary: "Una pallina turchese con Babbo Natale sorridente e la scritta Ho Ho Ho, fotografata su una base decorativa innevata.",
     photos: ["18_pallina_babbo_ho_ho_ho.webp"]
   }
+  ,{
+    id: "babbo-natale-camino",
+    name: "Babbo Natale nel camino",
+    tag: "SCENOGRAFIA NATALIZIA DIPINTA A MANO",
+    category: "addobbi",
+    summary: "Una scenografia natalizia dipinta a mano: Babbo Natale a testa in giù nel camino, casette innevate e la slitta davanti alla luna.",
+    photos: ["19_camino_babbo_natale_catalogo.webp", "20_camino_babbo_natale_dettaglio.webp"]
+  }
 ];
