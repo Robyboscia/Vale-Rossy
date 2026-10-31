@@ -139,13 +139,16 @@ window.VALE_ROSSY_PRODUCTS = [
   },
   {
     "id": "babbo-natale-camino",
-    "name": "Babbo Natale nel camino",
-    "tag": "SCENOGRAFIA NATALIZIA DIPINTA A MANO",
+    "name": "Quadro dipinto a mano in acrilico – 90 × 60 cm",
+    "tag": "QUADRO DIPINTO A MANO",
     "category": "addobbi",
-    "summary": "Una scenografia natalizia dipinta a mano: Babbo Natale a testa in giù nel camino, casette innevate e la slitta davanti alla luna.",
+    "summary": "Quadro natalizio dipinto a mano con colori acrilici, formato 90 × 60 cm: Babbo Natale a testa in giù nel camino, casette innevate e una slitta davanti alla luna.",
     "photos": [
+      "32_alberelli_soffici.webp",
       "19_camino_babbo_natale_catalogo.webp",
-      "20_camino_babbo_natale_dettaglio.webp"
+      "20_camino_babbo_natale_dettaglio.webp",
+      "33_alberelli_soffici_dettaglio.webp",
+      "37_alberelli_soffici_seconda_vista.webp"
     ]
   },
   {
@@ -230,18 +233,6 @@ window.VALE_ROSSY_PRODUCTS = [
       "29_quadro_casetta_innevata.webp",
       "30_quadro_casetta_dettaglio.webp",
       "36_quadro_casetta_confezionato.webp"
-    ]
-  },
-  {
-    "id": "alberelli-soffici",
-    "name": "Alberelli soffici bianchi e verdi",
-    "tag": "DECORAZIONI NATALIZIE",
-    "category": "addobbi",
-    "summary": "Alberelli morbidi con piccoli dettagli colorati, stelle in cima e rifiniture bianche e verdi.",
-    "photos": [
-      "32_alberelli_soffici.webp",
-      "33_alberelli_soffici_dettaglio.webp",
-      "37_alberelli_soffici_seconda_vista.webp"
     ]
   }
 ];
