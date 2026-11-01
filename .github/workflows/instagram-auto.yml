@@ -1,0 +1,51 @@
+name: Vale & Rossy | autopubblica nuove foto su Instagram
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - products.js
+      - 'assets/img/**'
+      - scripts/instagram_auto.py
+      - .github/workflows/instagram-auto.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vale-rossy-instagram-publish
+  cancel-in-progress: false
+
+jobs:
+  nuovi-prodotti:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Leggi catalogo aggiornato
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installa librerie gratuite
+        run: python -m pip install --disable-pip-version-check pillow requests
+      - name: Prepara le fotografie Instagram (senza ritagli)
+        run: python scripts/instagram_catalog.py prepare
+      - name: Salva le nuove immagini JPEG pubbliche
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/instagram
+          if ! git diff --cached --quiet; then
+            git commit -m "Instagram: prepara nuove immagini JPEG Vale & Rossy"
+            git push origin HEAD:main
+          fi
+      - name: Pubblica solo le nuove fotografie, se Instagram e autorizzato
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python scripts/instagram_auto.py
