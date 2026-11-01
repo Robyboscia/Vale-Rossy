@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-store">
+<title>Collega Instagram · Vale & Rossy</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,-apple-system,sans-serif;background:#f7f4ee;color:#253d31}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:1.25rem;box-sizing:border-box}
+main{background:#fff;border-radius:20px;padding:2rem;max-width:520px;box-shadow:0 8px 30px #1e33261a}
+h1{margin:0 0 1rem}p{line-height:1.6}button{border:0;border-radius:9px;background:#254635;color:white;font:inherit;padding:.85rem 1rem;cursor:pointer;font-weight:650}
+#code{overflow-wrap:anywhere;background:#f1f3f0;padding:1rem;border-radius:9px;font-family:monospace;max-height:150px;overflow:auto}
+small{color:#526559}a{color:#245636}#result{font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<h1>Vale & Rossy · Instagram</h1>
+<p id="status" role="status">Verifica del risultato dell'autorizzazione…</p>
+<section id="authorization" hidden>
+<p>Meta ha reindirizzato correttamente a questo indirizzo. Questo codice di autorizzazione è temporaneo e non è ancora un token di accesso.</p>
+<p id="code" aria-label="Codice di autorizzazione"></p>
+<button id="copy" type="button">Copia il codice temporaneo</button>
+<p id="result" role="status"></p>
+<small>Non condividere il codice, questo link o schermate che lo contengono. Torna alla chat per completare in modo sicuro la configurazione con Meta.</small>
+</section>
+<p><a href="/">Torna al sito Vale & Rossy</a></p>
+</main>
+<script>
+(() => {
+"use strict";
+const params = new URLSearchParams(location.search);
+const code = params.get("code");
+const error = params.get("error_description") || params.get("error");
+history.replaceState(null, "", location.pathname);
+const status=document.querySelector("#status");
+if(error){status.textContent="Instagram non ha autorizzato l'accesso. Controlla le autorizzazioni su Meta e riprova.";return}
+if(!code){status.textContent="Questa è la pagina di ritorno dell'autorizzazione Instagram. Avvia l'accesso da Meta for Developers.";return}
+status.textContent="Autorizzazione ricevuta.";
+document.querySelector("#authorization").hidden=false;
+document.querySelector("#code").textContent=code;
+document.querySelector("#copy").addEventListener("click",async()=>{
+  try{await navigator.clipboard.writeText(code);document.querySelector("#result").textContent="Codice temporaneo copiato. Non inserirlo in chat o in un file pubblico."}
+  catch{document.querySelector("#result").textContent="Seleziona il codice con il mouse e copialo. Non condividerlo in chat."}
+});
+})();
+</script>
+</body>
+</html>
