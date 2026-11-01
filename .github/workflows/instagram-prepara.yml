@@ -1,0 +1,57 @@
+name: Vale & Rossy | prepara le immagini Instagram
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/instagram_catalog.py
+      - .github/workflows/instagram-prepara.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vale-rossy-prepara-instagram
+  cancel-in-progress: false
+
+jobs:
+  prepara:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Prepara i JPEG senza ritagliare le creazioni
+        run: |
+          python -m pip install --disable-pip-version-check pillow
+          python scripts/instagram_catalog.py prepare
+      - name: Verifica le immagini richieste dal catalogo
+        run: |
+          python - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          spec = importlib.util.spec_from_file_location("catalog", "scripts/instagram_catalog.py")
+          mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+          for product in mod.catalog():
+              for name in product["photos"]:
+                  assert (Path("assets/instagram") / (Path(name).stem + ".jpg")).is_file(), name
+          print("Tutte le fotografie sono disponibili in JPEG")
+          PY
+      - name: Salva i JPEG sul sito pubblico
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/instagram
+          if git diff --cached --quiet; then
+            echo "Tutte le immagini sono già aggiornate."
+          else
+            git commit -m "Prepara 37 fotografie JPEG per Instagram Vale & Rossy"
+            git push
+          fi
