@@ -1,5 +1,25 @@
 # Instagram Vale & Rossy — pubblicazione gratuita via GitHub
 
+## NOVITÀ — Autopubblicazione delle nuove foto sul sito
+
+✅ Il workflow [Vale & Rossy | autopubblica nuove foto](https://github.com/Robyboscia/Vale-Rossy/actions/workflows/instagram-auto.yml) è installato nel ramo `main` e si avvia da solo quando modifichiamo `products.js` oppure i file in `assets/img/`.
+
+**Attivazione: una tantum**: configura Meta Instagram API with Instagram Login e inserisci il token in [GitHub Secret IG_ACCESS_TOKEN](https://github.com/Robyboscia/Vale-Rossy/settings/secrets/actions/new). Il workflow rimane inattivo per la pubblicazione se il secret non è presente. Non usare Metricool e TinyFish.
+
+**Cosa succede dopo l'autorizzazione:**
+1. Carica la foto nella cartella `assets/img/` e inserisci il **nuovo nome file** nella scheda di `products.js`. Il file da solo, non inserito in una scheda, non viene pubblicato.
+2. GitHub Actions crea automaticamente il JPEG 1080×1350 e lo rende disponibile su `assets/instagram/`.
+3. Instagram pubblica la foto con la **stessa descrizione** (`summary`) del sito; se più foto vengono aggiunte contemporaneamente alla stessa scheda, crea un carosello unico.
+4. Il registro `instagram_auto_state.json` evita doppioni. Le **37 fotografie già nel sito al momento dell'attivazione** sono state registrate come baseline: non vengono pubblicate automaticamente per errore.
+5. Il sistema controlla l'account `@ticonciamoperlefeste2026`, la quota di pubblicazione e lo stato di ogni contenitore. Se la risposta di pubblicazione è incerta, si ferma e richiede una verifica manuale prima di ritentare.
+
+**Attenzione:** se sostituisci la fotografia mantenendo lo stesso nome file, il sistema considera quella fotografia già vista. Per pubblicare una nuova foto usa un nuovo nome file e aggiungilo alla scheda. Se il token è assente, i nuovi elementi restano in attesa e la prossima esecuzione del workflow può riprovarci dopo l'autorizzazione. Il token Instagram può scadere: occorre rinnovarlo periodicamente.
+
+**Stato attuale (01/11/2026):** primo test GitHub Actions completato con successo. Nessuna foto nuova riconosciuta e **nessun post pubblicato**, perché il Secret Meta non è ancora configurato.
+
+---
+
+
 **Account autorizzato: @ticonciamoperlefeste2026.** Non usare Metricool o TinyFish.
 
 ## Stato del progetto
