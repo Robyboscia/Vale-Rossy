@@ -8,8 +8,8 @@
 - Immagini: `assets/instagram/*.jpg`, 37 fotografie convertite a 1080 × 1350 senza tagli.
 - Testi: descrizioni `summary` originali del sito, senza hashtag/prezzi aggiunti.
 - Oggetti con più immagini: un post carosello per prodotto (fino a 10 immagini).
-- Automazione di preparazione: [GitHub Actions — prepara](../actions/workflows/instagram-prepara.yml).
-- Automazione di pubblicazione: [GitHub Actions — PUBBLICA subito](../actions/workflows/instagram-pubblica.yml).
+- Automazione di preparazione: [GitHub Actions — prepara](https://github.com/Robyboscia/Vale-Rossy/actions/workflows/instagram-prepara.yml).
+- Automazione di pubblicazione: [GitHub Actions — PUBBLICA subito](https://github.com/Robyboscia/Vale-Rossy/actions/workflows/instagram-pubblica.yml).
 
 ## Autorizzazione Meta: una tantum
 
@@ -19,8 +19,8 @@ Per l'API **Instagram Login** serve un'app Meta con un token utente autorizzato 
 2. Crea o seleziona un'app Meta e configura il prodotto **Instagram API with Instagram Login**. In base all'interfaccia potresti dover configurare prima un caso d'uso Instagram Business.
 3. Autorizza l'account Instagram Business come tester/utente dell'app, se richiesto dal pannello.
 4. Genera un **Instagram User Access Token** con le autorizzazioni `instagram_business_basic` e `instagram_business_content_publish`. Usa il flusso Instagram Login, **non** il token Facebook Login.
-5. Senza incollare il token in una chat, visita [Aggiungi GitHub Actions Secret](../settings/secrets/actions/new), imposta **Name = IG_ACCESS_TOKEN** e incolla il token come **Secret**.
-6. Vai su [PUBBLICA subito](../actions/workflows/instagram-pubblica.yml), seleziona **Run workflow**, scegli **PUBBLICA_22_ORA**, premi di nuovo **Run workflow**.
+5. Senza incollare il token in una chat, visita [Aggiungi GitHub Actions Secret](https://github.com/Robyboscia/Vale-Rossy/settings/secrets/actions/new), imposta **Name = IG_ACCESS_TOKEN** e incolla il token come **Secret**.
+6. Vai su [PUBBLICA subito](https://github.com/Robyboscia/Vale-Rossy/actions/workflows/instagram-pubblica.yml), seleziona **Run workflow**, scegli **PUBBLICA_22_ORA**, premi di nuovo **Run workflow**.
 
 **Non creare una Pagina Facebook soltanto per questo flusso:** la modalità Instagram Login funziona direttamente con l'account professionale.
 
