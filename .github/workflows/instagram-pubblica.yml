@@ -1,0 +1,49 @@
+name: Vale & Rossy | PUBBLICA subito le creazioni su Instagram
+
+on:
+  workflow_dispatch:
+    inputs:
+      conferma:
+        description: "Per pubblicare ORA tutti i prodotti, scegli PUBBLICA_22_ORA"
+        type: choice
+        required: true
+        default: ANNULLA
+        options:
+          - ANNULLA
+          - PUBBLICA_22_ORA
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vale-rossy-instagram-publish
+  cancel-in-progress: false
+
+jobs:
+  pubblica:
+    if: github.event.inputs.conferma == 'PUBBLICA_22_ORA'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      CONFIRM_INSTAGRAM_PUBLISH: ${{ github.event.inputs.conferma }}
+    steps:
+      - name: Checkout del catalogo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installa dipendenze
+        run: python -m pip install --disable-pip-version-check requests pillow
+      - name: Controlla la disponibilita delle immagini pubbliche
+        run: |
+          python scripts/instagram_catalog.py prepare
+          if [ -n "$(git status --short assets/instagram)" ]; then
+            echo "::error::Foto Instagram non ancora caricate nel repository: attendere il workflow di preparazione."
+            exit 1
+          fi
+      - name: Pubblica ora il catalogo con le descrizioni originali
+        run: python scripts/instagram_catalog.py publish
