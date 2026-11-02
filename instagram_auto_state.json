@@ -60,5 +60,12 @@
       "published_at": "2026-11-02T19:50:36.609324+00:00"
     }
   ],
-  "pending": null
+  "pending": {
+    "product_id": "babbo-camino-decorazione",
+    "photos": [
+      "40_babbo_natale_camino_decorazione.webp"
+    ],
+    "container_id": "17869622460693307",
+    "started_at": "2026-11-02T19:50:57.679319+00:00"
+  }
 }
