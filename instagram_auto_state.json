@@ -41,7 +41,8 @@
     "37_alberelli_soffici_seconda_vista.webp",
     "38_medaglione_quintessenza_blu_oro.webp",
     "39_alberello_conico_turchese_oro.webp",
-    "40_babbo_natale_camino_decorazione.webp"
+    "40_babbo_natale_camino_decorazione.webp",
+    "41_portatovaglioli_blu_fiori_rosa.webp"
   ],
   "posts": [
     {
@@ -67,14 +68,15 @@
       ],
       "instagram_id": "18100744682090334",
       "published_at": "2026-11-02T19:51:03.078017+00:00"
+    },
+    {
+      "product_id": "portatovaglioli-blu-fiori-rosa",
+      "photos": [
+        "41_portatovaglioli_blu_fiori_rosa.webp"
+      ],
+      "instagram_id": "18647239096048355",
+      "published_at": "2026-11-02T19:51:27.957394+00:00"
     }
   ],
-  "pending": {
-    "product_id": "portatovaglioli-blu-fiori-rosa",
-    "photos": [
-      "41_portatovaglioli_blu_fiori_rosa.webp"
-    ],
-    "container_id": "17869622520693307",
-    "started_at": "2026-11-02T19:51:22.604816+00:00"
-  }
+  "pending": null
 }
