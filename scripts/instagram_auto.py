@@ -83,7 +83,7 @@ def main():
         return
 
     sess = http_session()
-    account = graph(sess, token, "GET", "me", fields="id,username,account_type")
+    account = graph(sess, token, "GET", EXPECTED_IG_ID, fields="id,username")
     username = str(account.get("username", "")).lower()
     if username != EXPECTED:
         raise RuntimeError(f"Token destinato a @{username}, non a @{EXPECTED}. Niente pubblicazione.")
