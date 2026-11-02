@@ -12,7 +12,7 @@ import subprocess
 import time
 
 from instagram_catalog import (
-    ROOT, EXPECTED, graph, http_session, photo_url,
+    ROOT, EXPECTED, EXPECTED_IG_ID, graph, http_session, photo_url,
     quota, wait_ready, catalog,
 )
 
