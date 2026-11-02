@@ -101,3 +101,12 @@ body:has(.product-dialog[open]) .whatsapp-sticky{visibility:hidden;pointer-event
  body:has(.whatsapp-sticky:not([hidden])){padding-bottom:0}
 }
 @media(prefers-reduced-motion:reduce){.whatsapp-sticky{transition:none}}
+
+/* Instagram Vale & Rossy: icona in navigazione e link esplicito nel footer */
+.nav-social{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:#174b37;white-space:nowrap;flex-shrink:0}
+.nav-social svg{display:block;flex:0 0 20px}
+.nav-social span{display:none}
+.nav-social:hover,.nav-social:focus-visible{color:var(--burgundy)}
+.footer-instagram{font-weight:750;color:#f1d8b0;white-space:nowrap}
+.footer-instagram:hover,.footer-instagram:focus-visible{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){.nav-social{justify-content:flex-start}.nav-social span{display:inline}.nav-social svg{width:20px;height:20px}}
