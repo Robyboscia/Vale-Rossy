@@ -1,0 +1,55 @@
+name: Vale & Rossy | VERIFICA token Instagram (senza pubblicare)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/instagram-verifica.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+    steps:
+      - name: Controlla token e account (sola lettura, zero pubblicazioni)
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, json, sys, urllib.request, urllib.error
+          token=os.environ.get('IG_ACCESS_TOKEN','').strip()
+          if not token:
+              print('ERRORE: il secret IG_ACCESS_TOKEN non è presente o è vuoto.')
+              sys.exit(1)
+          url='https://graph.facebook.com/v25.0/17841480799194797?fields=id%2Cusername'
+          req=urllib.request.Request(url,headers={
+              'Authorization':'Bearer '+token,
+              'Accept':'application/json',
+              'User-Agent':'ValeRossyReadOnlyVerifier/1.0'
+          })
+          try:
+              with urllib.request.urlopen(req,timeout=25) as res:
+                  data=json.load(res)
+          except urllib.error.HTTPError as e:
+              try:
+                  obj=json.loads(e.read().decode('utf-8')).get('error',{})
+                  print('ERRORE META: '+str(obj.get('message','API non autorizzata'))[:300]+' | codice '+str(obj.get('code','?')))
+              except Exception:
+                  print('ERRORE META HTTP '+str(e.code))
+              sys.exit(1)
+          except Exception as e:
+              print('ERRORE CONNESSIONE: '+type(e).__name__)
+              sys.exit(1)
+          username=data.get('username','').lower()
+          if str(data.get('id'))!='17841480799194797' or username!='ticonciamoperlefeste2026':
+              print('ERRORE: il token non corrisponde all’account Instagram Vale & Rossy.')
+              sys.exit(1)
+          print('OK: IG_ACCESS_TOKEN funziona.')
+          print('OK: Account riconosciuto: @ticonciamoperlefeste2026.')
+          print('Questo controllo non ha pubblicato, modificato o eliminato alcun post.')
+          PY
