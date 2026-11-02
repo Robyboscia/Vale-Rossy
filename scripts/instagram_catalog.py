@@ -20,8 +20,9 @@ OUTPUT = ROOT / "assets" / "instagram"
 LEDGER = ROOT / "instagram_pubblicati.json"
 SITE = "https://vale-rossy.pages.dev"
 RAW = "https://raw.githubusercontent.com/Robyboscia/Vale-Rossy/main"
-API = "https://graph.instagram.com/v25.0"
+API = "https://graph.facebook.com/v25.0"  # Meta Unified Login (SUAT), NON Instagram Login classico
 EXPECTED = "ticonciamoperlefeste2026"
+EXPECTED_IG_ID = "17841480799194797"  # Identificativo account Vale & Rossy mostrato da Meta Developers
 
 
 def catalog():
@@ -160,11 +161,11 @@ def publish():
         raise RuntimeError("Secret IG_ACCESS_TOKEN non configurato. Nessun post pubblicato.")
     products = catalog()
     sess = http_session()
-    account = graph(sess, token, "GET", "me", fields="id,username,account_type")
+    account = graph(sess, token, "GET", EXPECTED_IG_ID, fields="id,username")
     username = (account.get("username") or "").lower()
-    if username != EXPECTED:
-        raise RuntimeError(f"Account Instagram non autorizzato: @{username}. Atteso @{EXPECTED}.")
-    user_id = str(account["id"])
+    if username != EXPECTED or str(account.get("id")) != EXPECTED_IG_ID:
+        raise RuntimeError(f"Account Instagram non autorizzato: @{username}. Atteso @{EXPECTED} ({EXPECTED_IG_ID}).")
+    user_id = EXPECTED_IG_ID
     print(f"Account verificato: @{username}; {len(products)} creazioni da pubblicare.")
     already_online = current_media(sess, token, user_id)
     log = json.loads(LEDGER.read_text(encoding="utf-8")) if LEDGER.exists() else {}
