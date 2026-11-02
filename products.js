@@ -234,5 +234,56 @@ window.VALE_ROSSY_PRODUCTS = [
       "30_quadro_casetta_dettaglio.webp",
       "36_quadro_casetta_confezionato.webp"
     ]
+  },
+  {
+    "id": "medaglione-quintessenza",
+    "name": "Medaglione Quintessenza blu e oro",
+    "tag": "DECORAZIONE DIPINTA A MANO",
+    "category": "addobbi",
+    "summary": "Medaglione decorativo blu intenso con bordo dorato, motivo geometrico centrale e scritta Quintessenza, rifinito a mano.",
+    "photos": [
+      "38_medaglione_quintessenza_blu_oro.webp"
+    ]
+  },
+  {
+    "id": "alberello-conico-turchese",
+    "name": "Alberello conico verde turchese",
+    "tag": "ALBERELLO ARTIGIANALE",
+    "category": "addobbi",
+    "summary": "Un alberello conico color verde turchese, con lavorazioni in rilievo e dettagli dorati, realizzato e dipinto a mano.",
+    "photos": [
+      "39_alberello_conico_turchese_oro.webp"
+    ]
+  },
+  {
+    "id": "babbo-camino-decorazione",
+    "name": "Babbo Natale incastrato nel camino",
+    "tag": "DECORAZIONE NATALIZIA",
+    "category": "addobbi",
+    "summary": "Una decorazione artigianale con Babbo Natale a testa in giù nel camino, mattoncini rossi in rilievo e neve bianca.",
+    "photos": [
+      "40_babbo_natale_camino_decorazione.webp"
+    ]
+  },
+  {
+    "id": "portatovaglioli-blu-fiori-rosa",
+    "name": "Portatovaglioli blu con fiori rosa",
+    "tag": "ACCESSORIO DIPINTO A MANO",
+    "category": "addobbi",
+    "summary": "Un portatovaglioli dipinto a mano, blu con bordo verde acqua e tre fiori rosa, per dare colore alla tavola.",
+    "photos": [
+      "41_portatovaglioli_blu_fiori_rosa.webp"
+    ]
+  },
+  {
+    "id": "decorazioni-buon-natale-tartan",
+    "name": "Decorazioni Buon Natale in tartan",
+    "tag": "DECORAZIONI NATALIZIE",
+    "category": "addobbi",
+    "summary": "Decorazioni natalizie artigianali con scritta Buon Natale, fantasia tartan rossa e verde e piccoli dettagli dorati, realizzate a mano.",
+    "photos": [
+      "43_decorazione_buon_natale_tartan.webp",
+      "42_creazioni_buon_natale_assortite.webp"
+    ]
   }
 ];
