@@ -4,6 +4,6 @@
 // email: indirizzo e-mail (facoltativo)
 window.VALE_ROSSY_CONFIG = {
   whatsapp: "393289228980",
-  instagram: "",
+  instagram: "https://www.instagram.com/ticonciamoperlefeste2026/",
   email: ""
 };
