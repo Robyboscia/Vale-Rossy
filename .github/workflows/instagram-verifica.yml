@@ -51,5 +51,35 @@ jobs:
               sys.exit(1)
           print('OK: IG_ACCESS_TOKEN funziona.')
           print('OK: Account riconosciuto: @ticonciamoperlefeste2026.')
+          # Test aggiuntivi in sola lettura: quota e accesso ai contenuti.
+          for route,fields,label in (
+              ('content_publishing_limit','quota_usage,config','quota pubblicazioni'),
+              ('media','id,caption','lettura media'),
+          ):
+              base='https://graph.facebook.com/v25.0/17841480799194797/'+route
+              test_url=base+'?fields='+fields.replace(',','%2C')+('&limit=1' if route=='media' else '')
+              test_req=urllib.request.Request(test_url,headers={
+                  'Authorization':'Bearer '+token,
+                  'Accept':'application/json',
+                  'User-Agent':'ValeRossyReadOnlyVerifier/1.0'
+              })
+              try:
+                  with urllib.request.urlopen(test_req,timeout=25) as resp:
+                      test_data=json.load(resp)
+              except urllib.error.HTTPError as exc:
+                  try:
+                      err=json.loads(exc.read().decode('utf-8')).get('error',{})
+                      print('NON VERIFICATO '+label+': '+str(err.get('message','API non autorizzata'))[:250]+' (code '+str(err.get('code','?'))+')')
+                  except Exception:
+                      print('NON VERIFICATO '+label+': HTTP '+str(exc.code))
+                  continue
+              except Exception as exc:
+                  print('NON VERIFICATO '+label+': '+type(exc).__name__)
+                  continue
+              if route=='content_publishing_limit':
+                  entry=(test_data.get('data') or [test_data])[0]
+                  print('OK: API quota accessibile; utilizzo='+str(entry.get('quota_usage','non comunicato')))
+              else:
+                  print('OK: API media Instagram accessibile in sola lettura.')
           print('Questo controllo non ha pubblicato, modificato o eliminato alcun post.')
           PY
