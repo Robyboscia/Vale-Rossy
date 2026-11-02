@@ -42,7 +42,9 @@
     "38_medaglione_quintessenza_blu_oro.webp",
     "39_alberello_conico_turchese_oro.webp",
     "40_babbo_natale_camino_decorazione.webp",
-    "41_portatovaglioli_blu_fiori_rosa.webp"
+    "41_portatovaglioli_blu_fiori_rosa.webp",
+    "42_creazioni_buon_natale_assortite.webp",
+    "43_decorazione_buon_natale_tartan.webp"
   ],
   "posts": [
     {
@@ -76,15 +78,16 @@
       ],
       "instagram_id": "18647239096048355",
       "published_at": "2026-11-02T19:51:27.957394+00:00"
+    },
+    {
+      "product_id": "decorazioni-buon-natale-tartan",
+      "photos": [
+        "43_decorazione_buon_natale_tartan.webp",
+        "42_creazioni_buon_natale_assortite.webp"
+      ],
+      "instagram_id": "17884963701527208",
+      "published_at": "2026-11-02T19:52:19.893447+00:00"
     }
   ],
-  "pending": {
-    "product_id": "decorazioni-buon-natale-tartan",
-    "photos": [
-      "43_decorazione_buon_natale_tartan.webp",
-      "42_creazioni_buon_natale_assortite.webp"
-    ],
-    "container_id": "17869622793693307",
-    "started_at": "2026-11-02T19:52:13.389932+00:00"
-  }
+  "pending": null
 }
