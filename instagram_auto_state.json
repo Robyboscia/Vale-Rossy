@@ -51,5 +51,12 @@
       "published_at": "2026-11-02T19:50:19.997632+00:00"
     }
   ],
-  "pending": null
+  "pending": {
+    "product_id": "alberello-conico-turchese",
+    "photos": [
+      "39_alberello_conico_turchese_oro.webp"
+    ],
+    "container_id": "17869622433693307",
+    "started_at": "2026-11-02T19:50:31.684488+00:00"
+  }
 }
