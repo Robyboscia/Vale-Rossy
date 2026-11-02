@@ -40,7 +40,8 @@
     "36_quadro_casetta_confezionato.webp",
     "37_alberelli_soffici_seconda_vista.webp",
     "38_medaglione_quintessenza_blu_oro.webp",
-    "39_alberello_conico_turchese_oro.webp"
+    "39_alberello_conico_turchese_oro.webp",
+    "40_babbo_natale_camino_decorazione.webp"
   ],
   "posts": [
     {
@@ -58,14 +59,15 @@
       ],
       "instagram_id": "18171106579475017",
       "published_at": "2026-11-02T19:50:36.609324+00:00"
+    },
+    {
+      "product_id": "babbo-camino-decorazione",
+      "photos": [
+        "40_babbo_natale_camino_decorazione.webp"
+      ],
+      "instagram_id": "18100744682090334",
+      "published_at": "2026-11-02T19:51:03.078017+00:00"
     }
   ],
-  "pending": {
-    "product_id": "babbo-camino-decorazione",
-    "photos": [
-      "40_babbo_natale_camino_decorazione.webp"
-    ],
-    "container_id": "17869622460693307",
-    "started_at": "2026-11-02T19:50:57.679319+00:00"
-  }
+  "pending": null
 }
