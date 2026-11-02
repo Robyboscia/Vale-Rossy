@@ -38,15 +38,18 @@
     "34_cerchio_trenino_dettaglio.webp",
     "35_cerchio_trenino_ambientato.webp",
     "36_quadro_casetta_confezionato.webp",
-    "37_alberelli_soffici_seconda_vista.webp"
+    "37_alberelli_soffici_seconda_vista.webp",
+    "38_medaglione_quintessenza_blu_oro.webp"
   ],
-  "posts": [],
-  "pending": {
-    "product_id": "medaglione-quintessenza",
-    "photos": [
-      "38_medaglione_quintessenza_blu_oro.webp"
-    ],
-    "container_id": "17869622376693307",
-    "started_at": "2026-11-02T19:50:14.608924+00:00"
-  }
+  "posts": [
+    {
+      "product_id": "medaglione-quintessenza",
+      "photos": [
+        "38_medaglione_quintessenza_blu_oro.webp"
+      ],
+      "instagram_id": "17913291405472726",
+      "published_at": "2026-11-02T19:50:19.997632+00:00"
+    }
+  ],
+  "pending": null
 }
